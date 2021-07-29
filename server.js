@@ -12,7 +12,7 @@ const PORT = 3000;
 
 app.use(cookieParser());
 app.use(express.json());
-app.set('view engine', 'ejs');
+// app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({ extended: true }));
 
 //require routers?
@@ -46,7 +46,6 @@ app.post('/signup', userController.createUser, cookieController.setSSIDCookie, s
     return res.redirect('/home');
 });
 
-
 /**
  * login
  */
@@ -59,11 +58,10 @@ app.post('/login', userController.verifyUser, cookieController.setSSIDCookie, se
 
 });
 
-
 //route handler to respond with main app 
 //if session controller can't come back with a ssid, redirect to login page
 app.get('/home', (req, res) => {
-    res.sendFile(path.resolve(__dirname, './login/home.html'))
+    res.sendFile(path.resolve(__dirname, './oldindex.html'))
 });
 
 // catch-all route handler for any requests to an unknown route

@@ -23,11 +23,6 @@ groceriesController.getResults = (req, res, next) => {
 
 // call controller to find and update the grocery document matching the name from groceriesRouter
 groceriesController.addGroceries = (req, res, next) => {
-    // let itemName = req.params;
-    // let name = 'name';
-    // let query = {};
-    // query[name] = itemName;
-    // console.log(groceries.findOne({}));
     
     groceries.find(
         req.params,

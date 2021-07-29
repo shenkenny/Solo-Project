@@ -2,7 +2,7 @@ const path = require('path');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-    entry: './login/login.ejs',
+    entry: './app.jsx',
     output: {
         path: path.resolve(__dirname, 'dist'),
         publicPath: '/',
@@ -44,8 +44,8 @@ module.exports = {
     },
     plugins: [
         new HtmlWebPackPlugin({
-          template: './index.ejs',
-          filename: './index.ejs',
+          template: './login/home.html',
+          filename: './login/home.html',
         })
     ],
     resolve: {
