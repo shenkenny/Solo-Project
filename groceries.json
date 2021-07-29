@@ -1,0 +1,17 @@
+[
+    {
+        "_id": "lawkjgl31j3roi",
+        "name": "banana",
+        "all" : "true",
+        "snacks": "false",
+        "veggies": "false",
+        "fruits": "true",
+        "drinks": "false",
+        "dessert": "false",
+        "sweet": "true",
+        "savory": "false",
+        "frozen": "false",
+        "haveAtHome": "false",
+        "timestamp": "temp"
+    }
+]

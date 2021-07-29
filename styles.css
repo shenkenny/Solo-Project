@@ -1,0 +1,33 @@
+/* reset default styles */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
+
+@media screen and (min-width: 1400px) {
+
+  html {
+    font-size: 1vw;
+  }
+}
+
+
+header {
+  font-family: 'Oswald', sans-serif;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fcfcfc;
+
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
