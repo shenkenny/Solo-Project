@@ -1,7 +1,7 @@
 import React, { Component } from "react"; 
 import { render } from "react-dom";
 import { BrowserRouter, Switch, Route, Link, withRouter  } from "react-router-dom";
-
+// import "./styles.css";
 
 class App extends Component {
     render() {
