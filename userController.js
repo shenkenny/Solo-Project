@@ -59,8 +59,8 @@ userController.createUser = (req, res, next) => {
 userController.verifyUser = (req, res, next) => {
   // Pull our username password (desstructure) off of the request body
   const { username, password } = req.body;
-  console.log(`Username login: ${username}`)
-  console.log(`Password login: ${password}`)
+  // console.log(`Username login: ${username}`)
+  // console.log(`Password login: ${password}`)
   // Then search our database with the username provided
   User.findOne({ username }, (err, user) => {
     if(err) return next(err);

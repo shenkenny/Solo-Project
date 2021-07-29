@@ -11,11 +11,6 @@ mongoose.connect(MONGO_URI, {
   dbName: 'users'
 })
 
-/**
-* Hint: Why is bcrypt required here?
-*/
-const SALT_WORK_FACTOR = 10;
-const bcrypt = require('bcryptjs');
 
 const userSchema = new Schema({
   username: { type: String, required: true, unique: true },

@@ -50,29 +50,18 @@ app.post('/signup', userController.createUser, cookieController.setSSIDCookie, s
 /**
  * login
  */
+//  
 app.post('/login', userController.verifyUser, cookieController.setSSIDCookie, sessionController.isLoggedIn, (req, res) => {
 // what should happen here on successful log in?
 // request should include username/pass
+    // console.log(res.locals);
     return res.redirect('/home');
 
 });
 
 
-// /**
-//  * Authorized routes
-//  */
-// app.get('/secret', userController.getAllUsers, (req, res) => {
-
-// /**
-// * The previous middleware has populated `res.locals` with users
-// * which we will pass this in to the res.render so it can generate
-// * the proper html from the `secret.ejs` template
-// */
-//     res.sendFile(path.resolve(__dirname, './login/secret.html'))
-
-// });
-
-//route handler to respond with main app
+//route handler to respond with main app 
+//if session controller can't come back with a ssid, redirect to login page
 app.get('/home', (req, res) => {
     res.sendFile(path.resolve(__dirname, './login/home.html'))
 });

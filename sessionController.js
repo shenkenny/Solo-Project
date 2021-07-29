@@ -8,6 +8,11 @@ const sessionController = {};
 */
 sessionController.isLoggedIn = (req, res, next) => {
   // write code here
+  //session is valid if req.locals.id === res.cookie.id
+  // console.log(res.locals.id);
+  console.log(res.locals.id);
+  if(res.locals.id) return next()
+  else return next('invalid session');
 
 };
 
