@@ -9,7 +9,7 @@ module.exports = {
         filename: 'bundle.js',
     },
     devtool: 'eval-source-map',
-    mode: 'development',
+    mode: 'production',
     devServer: {
         host: 'localhost',
         port: 8080,
@@ -43,10 +43,7 @@ module.exports = {
         ],
     },
     plugins: [
-        new HtmlWebPackPlugin({
-          template: './login/home.html',
-          filename: './login/home.html',
-        })
+        new HtmlWebPackPlugin()
     ],
     resolve: {
         extensions: ['.js', '.jsx']

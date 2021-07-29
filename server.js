@@ -61,7 +61,7 @@ app.post('/login', userController.verifyUser, cookieController.setSSIDCookie, se
 //route handler to respond with main app 
 //if session controller can't come back with a ssid, redirect to login page
 app.get('/home', (req, res) => {
-    res.sendFile(path.resolve(__dirname, './oldindex.html'))
+    res.sendFile(path.resolve(__dirname, './login/home.html'))
 });
 
 // catch-all route handler for any requests to an unknown route

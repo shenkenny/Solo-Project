@@ -44,8 +44,6 @@ class Categories extends Component {
             .catch(err => console.log('Categories.getResults failed'));
     }
     //render a button for each category
-    //onclick {getResults}
-    //render DisplayResults, pass in array of results from getResults
     render() {
         let categories = ['all','drinks','meat','sauce','snacks','staples','veggies'];
         let buttons = [];
@@ -74,11 +72,7 @@ class Categories extends Component {
 }
 
 const DisplayResults = ({results, getResults, category}) => {
-    // Render table from array of objects....
-    // https://stackoverflow.com/questions/45427163/map-over-an-array-of-objects-to-create-a-table-in-reactjs
-    // console.log(results);
-    // results.state = {results: []}
-    //create component if results exists
+
     let display = [];
     if(results[0]){
         // for each result, create tr,td elements
@@ -115,14 +109,7 @@ const DisplayResults = ({results, getResults, category}) => {
 }
 
 const RemoveItem = ({name, getResults, category}) => {
-    // constructor(props) {
-    //     super(props);
-    //     this.state = {
-    //         itemName: this.props.name,
-    //         key: ''
-    //     };
-    //     this.removeItem = this.removeItem.bind(this);
-    // }
+
     const removeItem = (name) => {
         console.log(name);
         fetch(`/removeItem/${name}`)
@@ -204,4 +191,4 @@ class AddItems extends Component {
 }
 
 
-render(<App />, document.querySelector("#root"));
+export default App;

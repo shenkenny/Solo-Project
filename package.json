@@ -3,7 +3,9 @@
     "version": "1.0.0",
     "description": "Solo Project",
     "scripts": {
-        "start": "webpack-dev-server --open & nodemon server.js"
+        "build": "webpack",
+        "start": "nodemon server.js",
+        "dev": "webpack-dev-server --open & nodemon server.js"
     },
     "author": "Kenny Shen",
     "license": "ISC",
