@@ -124,7 +124,6 @@ const RemoveItem = ({name, getResults, category}) => {
     //     this.removeItem = this.removeItem.bind(this);
     // }
     const removeItem = (name) => {
-        console.log(name);
         fetch(`/removeItem/${name}`)
             .then(res => res.json())
             .then(res => {
@@ -132,10 +131,8 @@ const RemoveItem = ({name, getResults, category}) => {
                 //     return {itemName: ""};
                 // });
                 getResults(category);
-                console.log("success res: ",res)
             })
             .catch(err => {
-                console.log("failure state: ",err);
                 console.log('removeItem failed')
             });
     }

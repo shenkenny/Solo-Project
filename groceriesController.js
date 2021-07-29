@@ -32,7 +32,6 @@ groceriesController.addGroceries = (req, res, next) => {
     groceries.find(
         req.params,
         (err,results) => {
-            console.log(results[0]);
             if(err) return next('addgrocery error');
             //if not found, return friendly error "try a broader term!"
             if(!results[0]) {
